@@ -1,0 +1,123 @@
+@font-face {
+  font-family: lemon-milk-bold;
+  src: url(./lemon_milk/LEMONMILK-Bold.otf);
+}
+@font-face {
+  font-family: lemon-milk-medium;
+  src: url(./lemon_milk/LEMONMILK-Medium.otf);
+}
+@font-face {
+  font-family: lemon-milk-regular;
+  src: url(./lemon_milk/LEMONMILK-Regular.otf);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: lemon-milk-regular, sans-serif;
+  background-color: #f7f8f9;
+  color: #1f1f1f;
+}
+
+#root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 5% 15%;
+}
+
+h1 {
+  font-family: lemon-milk-bold;
+  font-size: clamp(1rem, 3vw, 2rem);
+}
+
+.title {
+  cursor: pointer;
+}
+
+nav {
+  display: flex;
+  gap: clamp(10px, 2vw, 50px);
+  align-items: center;
+  margin-left: 2rem;
+}
+
+main {
+  flex: 1;
+  padding: 0% 15%;
+}
+
+footer {
+  text-align: center;
+  color: #f7f8f9;
+  margin-top: 1rem;
+  background: radial-gradient(
+    circle,
+    rgba(131, 58, 180, 1) 0%,
+    rgba(253, 29, 29, 1) 50%,
+    rgba(252, 176, 69, 1) 100%
+  );
+  background-size: 200%;
+  animation: gradient 10s ease infinite;
+}
+
+button {
+  font-family: lemon-milk-medium;
+}
+
+.icon:hover {
+  transform: scale(1.25);
+}
+
+.rainbow-text:hover {
+  background: radial-gradient(
+    circle,
+    rgba(131, 58, 180, 1) 0%,
+    rgba(253, 29, 29, 1) 50%,
+    rgba(252, 176, 69, 1) 100%
+  );
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0%;
+  }
+  to {
+    opacity: 100%;
+  }
+}
+
+@keyframes slideIn {
+  from {
+    translate: 100%;
+  }
+  to {
+    translate: 0%;
+  }
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
